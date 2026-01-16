@@ -29,8 +29,8 @@ const Notes = ({note, setNotes}) => {
     return(
         <>
           <Link to={`/note/${note._id}`} key={note._id} data-theme="forest" className="min-h-[90px] group p-1 rounded-md border-2 border-green-500 hover:bg-green-800 active:scale-95 transition-all duration-100">
-            <h2 key={`${note._id}1`} className="px-1 font-bold text-1xl text-green-300 border-b-1 border-b-green-500 group-hover:text-green-300">{note.title}</h2>
-            <p key={`${note._id}2`} className="m-1 text-green-400 group-hover:text-green-200">{note.content}</p>
+            <h2 key={`${note._id}1`} className="px-1 font-bold text-1xl text-green-300 border-b-1 border-b-green-500 group-hover:text-green-300 text-wrap break-words line-clamp-2">{note.title}</h2>
+            <p key={`${note._id}2`} className="m-1 text-green-400 group-hover:text-green-200 text-wrap break-words line-clamp-5">{note.content}</p>
             <div key={`${note._id}3`} className="p-1 border-t-2 border-t-green-500 md:flex justify-between items-center">
                 <div key={`${note._id}3.1`} className="text-sm">
                     <span className="text-green-500">Created:</span> {new Date(note.createdAt).toLocaleDateString(undefined,{
